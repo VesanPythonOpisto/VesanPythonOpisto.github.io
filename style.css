@@ -1,118 +1,95 @@
-/* general styles */
+/* Default styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles for the body */
 body {
   font-family: Arial, sans-serif;
-  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f1f1f1;
 }
 
-/* heading styles */
+/* Styles for the header */
+header {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the title */
 h1 {
-  font-size: 2.5em;
+  font-size: 36px;
   font-weight: bold;
-  text-align: center;
-  margin: 0.5em 0;
+  text-transform: uppercase;
+  animation: titleAnimation 1s infinite;
 }
 
+/* Animation for the title */
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Styles for the other headings */
 h2 {
-  font-size: 2em;
+  font-size: 24px;
   font-weight: bold;
-  margin: 1em 0 0.5em;
+  margin: 20px 0 10px;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 18px;
   font-weight: bold;
-  margin: 0.5em 0;
+  margin: 10px 0;
 }
 
-h4, h5, h6 {
-  font-size: 1.2em;
-  font-style: italic;
-  margin: 0.5em 0;
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #0077cc;
 }
 
-/* link styles */
+h5 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ff0000;
+}
+
+h6 {
+  font-size: 12px;
+  margin: 10px 0;
+  color: #888;
+}
+
+/* Styles for links */
 a {
-  color: #0066cc;
+  color: #0077cc;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #ff0000;
 }
 
-/* miscellaneous styles */
-.error {
-  color: red;
-  font-weight: bold;
-}
+/* Styles for the favicon */
+/* ... */
 
-.warning {
-  color: orange;
-}
-
-.success {
-  color: green;
-}
-
-/* layout styles */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1em;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 1em;
-}
-
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.menu {
-  display: flex;
-}
-
-.menu li {
-  list-style: none;
-  margin: 0 1em;
-}
-
-@media screen and (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-
-  .menu-btn {
-    display: block;
-    font-size: 1.5em;
-    color: #fff;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    position: absolute;
-    top: 5em;
-    left: 0;
-    width: 100%;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 0.5em 0;
-  }
-}
+/* Styles for the rest of the page */
+/* ... */
