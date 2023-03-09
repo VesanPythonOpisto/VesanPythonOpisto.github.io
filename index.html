@@ -17,4 +17,47 @@
     <h5>jos plagioit tai kopiot tätä sivua sinut lähetetään ahvenanmaalle</h5>
     <h6>ystävällisin terveisin vesan python opiston johto (ja suomen hallitus)</h6>
 </body>
+<script>// responsive navigation menu
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    
+    // form validation
+    const form = document.querySelector('form');
+    const nameInput = document.querySelector('#name');
+    const emailInput = document.querySelector('#email');
+    const messageInput = document.querySelector('#message');
+    const errorContainer = document.querySelector('.error-container');
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let errors = [];
+    
+      if (nameInput.value === '') {
+        errors.push('Name is required');
+      }
+      if (emailInput.value === '') {
+        errors.push('Email is required');
+      } else if (!isValidEmail(emailInput.value)) {
+        errors.push('Please enter a valid email');
+      }
+      if (messageInput.value === '') {
+        errors.push('Message is required');
+      }
+    
+      if (errors.length > 0) {
+        errorContainer.innerHTML = '<ul>' + errors.map(error => '<li>' + error + '</li>').join('') + '</ul>';
+      } else {
+        form.submit();
+      }
+    });
+    
+    function isValidEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+    </script>
 </html>
