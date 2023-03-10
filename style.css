@@ -112,7 +112,7 @@ img {
 }
 
 /* Use the file name of your image here */
-img[src$="skull lol.png"] {
+img[src$="skull lol.PNG"] {
   animation: spin-skull 2s linear infinite;
 }
 
