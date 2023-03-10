@@ -93,3 +93,37 @@ a:hover {
 
 /* Styles for the rest of the page */
 /* ... */
+img {
+  width: 200px;
+  height: 200px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Use the file name of your image here */
+img[src$="skull lol.png"] {
+  animation: spin-skull 2s linear infinite;
+}
+
+@keyframes spin-skull {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
