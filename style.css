@@ -113,7 +113,7 @@ img {
 
 /* Use the file name of your image here */
 img[src$="skull lol.PNG"] {
-  animation: spin-skull 2s linear infinite;
+  animation: spin-skull 4s linear infinite;
 }
 
 @keyframes spin-skull {
@@ -134,5 +134,5 @@ img[src$="skull lol.PNG"] {
 img {
   display: block;
   margin: auto 0;
-  margin-left: 300px;
+  margin-left: 600px;
 }
